@@ -1,0 +1,76 @@
+<div class="page-wrapper full-height" style="background-image:url(../../assets/pictures/main-background.jpg);">
+    <div class="full-height tranparent flex flex-col">
+        <div class="page-content2">
+            <div class="row">
+                <h2>Nạp tiền điện thoại</h2>
+                <div class="green row" style="padding: 5px 0px;">
+                    Trang chủ > nạp tiền > nạp tiền điện thoại
+                </div>
+            </div>
+            <div class="med flex flex-col gap-075">
+                <div style="margin: 16px 0px;">
+                    Bước 2: xác nhận giao dịch
+                </div>
+                <div class="fancy box-content padding-5">
+                    <div class="flex flex-col gap-6">
+                        <div class="row">
+                            Quý khách vui lòng <b>kiểm tra và xác nhận</b> thông tin giao dịch
+                        </div>
+                        <div class="grid grid-3">
+                            <div class="col-1-1">Tài khoản nguồn</div>
+                            <div class="col-2-2 left-text">
+                                {{rootAccount}}
+                            </div>
+                        </div>
+                        <div class="grid grid-3">
+                            <div class="col-1-1">Nhà mạng</div>
+                            <div class="col-2-2 left-text">
+                                {{providerName}}
+                            </div>
+                        </div>
+                        <div class="grid grid-3">
+                            <div class="col-1-1">Dịch vụ</div>
+                            <div class="col-2-2 left-text">
+                                {{providerService}}
+                            </div>
+                        </div>
+                        <div class="grid grid-3">
+                            <div class="col-1-1">Số điện thoại</div>
+                            <div class="col-2-2 left-text">
+                                {{phoneNumber}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fancy box-content padding-5">
+                    <div class="flex flex-col gap-6">
+                        <div class="grid grid-3">
+                            <div class="col-1-1">Phí giao dịch</div>
+                            <div class="col-2-2 left-text">
+                                0
+                            </div>
+                        </div>
+                        <div class="grid grid-3">
+                            <div class="col-1-1">Số tiền nạp</div>
+                            <div class="col-2-2 left-text">
+                                {{payAmount}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fancy row">
+                    <div class="grid grid-3">
+                        <div class="col-1-1 center-h">Phương thức xác thực</div>
+                        <select div class="col-2-2">
+                            <option selected>Không cần xác thực</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex">
+                    <button type="button" (click)="backPayPhone()" class="classic-btn">Quay lại</button>
+                    <button type="button" (click)="toPayPhone3()" class="classic-btn">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

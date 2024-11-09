@@ -1,0 +1,97 @@
+<div class="page-wrapper full-height" style="background-image:url(../../assets/pictures/main-background.jpg);">
+    <div class="full-height tranparent flex flex-col">
+        <div class="page-content2">
+            <div class="row">
+                <h2>Nạp tiền điện thoại</h2>
+                <div class="green row" style="padding: 5px 0px;">
+                    Trang chủ > nạp tiền > nạp tiền điện thoại
+                </div>
+            </div>
+            <div class="med flex flex-col gap-075">
+                <form [formGroup]="payPhoneForm"  (ngSubmit)="toPayPhone2()">
+                    <div class="green" style="margin: 16px 0px;">
+                        Bước 1: khởi tạo giao dịch
+                    </div>
+                    <div class="fancy card-content padding-5" style="margin-bottom: 8px;">
+                        <div class="flex flex-col gap-5">
+                            <div class="grid grid-3">
+                                <div class="col-1-1">Tài khoản nguồn</div>
+                                <select 
+                                    class="col-2-2"
+                                    formControlName="rootAccount"
+                                    >
+                                    <option>1022384749</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-3">
+                                <div class="col-1-1">Số dư</div>
+                                <div 
+                                    class="col-2-2"
+                                    formControlName="rootMoney"
+                                    >
+                                    <span formControlName="rootMoney">(100000)</span>
+                                    <span>VND</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div>Thông tin giao dịch</div>
+                    </div>
+                    <div class="fancy card-content padding-5" style="margin-bottom: 8px;">
+                        <div class="flex flex-col gap-5">
+                            <div class="grid grid-3">
+                                <div class="green col-1-1 center-h">Nhà mạng</div>
+                                <select 
+                                    class="col-2-2"
+                                    formControlName="providerName"
+                                    >
+                                    <option selected>GTel</option>
+                                    <option>VietTel</option>
+                                    <option>Mobiphone</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-3">
+                                <div class="green col-1-1 center-h">Dịch vụ</div>
+                                <select 
+                                    class="col-2-2"
+                                    formControlName="providerService"
+                                    >
+                                    <option selected>Nạp cước điện thoại di dộng trả trước</option>
+                                    <option>Nạp cước điện thoại di dộng trả sau</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-3">
+                                <div class="green col-1-1">Số điện thoại</div>
+                                <div>
+                                    <input 
+                                        type="text" 
+                                        placeholder="Nhập số điện thoại"
+                                        formControlName="phoneNumber"
+                                        > 
+                                    <span hidden>Để trống nếu nạp cho chính mình</span>
+                                </div>
+                            </div>
+                            <div class="grid grid-3">
+                                <div class="green col-1-1">Mệnh giá</div>
+                                <div 
+                                    class="col-2-2"
+                                    formControlName=""
+                                    >
+                                    <div>30,000 VND</div>
+                                    <div>50,000 VND</div>
+                                    <div>100,000 VND</div>
+                                    <div>200,000 VND</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button 
+                        class="classic-btn"
+                        type="submit"
+                        >Hoàn tất</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

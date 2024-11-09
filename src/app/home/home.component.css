@@ -1,0 +1,16 @@
+.card-btn{
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    display: block;
+}
+
+#small-box{
+    max-width: 120px;
+}
+#spending-chart-placeholder{
+    max-width: 250px;
+}
+#fit-row{
+
+}

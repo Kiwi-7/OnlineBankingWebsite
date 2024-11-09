@@ -1,0 +1,282 @@
+<div class="left-part">
+    <div class="upper-block">
+        <span id="logoName">KIWI</span>
+        <span id="logoTypeName">DigiBank</span>
+    </div>
+    <hr>
+    <div class="mid-block">
+        <div class="flex flex-col gap-4" style="padding: 22px;">
+            <a class="fancy thick-a" routerLink="home" aria-current="page">
+                <div class="icon-box"><i class="large fa-solid fa-vault"></i></div>
+                <div id="nav-content">Trang chủ</div>
+            </a>    
+           <a class="fancy thick-a" (click)="transferCliked()">
+                <div class="icon-box"><i class="large fa-solid fa-money-bill-transfer"></i></div>
+                <div id="nav-content">Chuyển tiền</div>
+            </a>     
+            <a class="fancy thick-a" (click)="billCliked()">
+                <div class="icon-box"><i class="large fa-solid fa-file-invoice"></i></div>
+                <div id="nav-content">Hóa đơn</div>
+            </a>       
+            <a class="fancy thick-a" (click)="payCliked()">
+                <div class="icon-box"><i class="large fa-solid fa-money-bills"></i></div>
+                <div id="nav-content">Nạp tiền</div>
+            </a>       
+            <a class="fancy diagonal-stripes thick-a">
+                <div class="icon-box"><i class="large fa-solid fa-gift"></i></div>
+                <div id="nav-content">Dịch vụ thẻ</div>
+            </a>       
+            <a class="fancy thick-a" routerLink="loan" aria-current="page">
+                <div class="icon-box"><i class="large fa-regular fa-credit-card"></i></div>
+                <div id="nav-content">Tín dụng</div>
+            </a>      
+            <a class="fancy thick-a" routerLink="saving" aria-current="page">
+                <div class="icon-box"><i class="large fa-solid fa-piggy-bank"></i></div>
+                <div id="nav-content">Tiết kiệm</div>
+            </a>    
+            <a class="fancy diagonal-stripes thick-a">
+                <div class="icon-box"><i class="large fa-solid fa-shield"></i></div>
+                <div id="nav-content">Bảo hiểm</div>
+            </a>
+            <a class="fancy thick-a" (click)="govCliked()">
+                <div class="icon-box"><i class="large fa-solid fa-building-columns"></i></div>
+                <div id="nav-content">Ngân sách nhà nước</div>
+            </a>
+            <a class="fancy thick-a" (click)="utilitiesCliked()">
+                <div class="icon-box"><i class="large fa-solid fa-layer-group"></i></div>
+                <div id="nav-content">Tiện ích</div>
+            </a>
+        </div>
+    </div>
+    <div class="bottom-block">
+        <div class="flex flex-col gap-4 padding-4">
+            <div class="row">
+                <div class="icon-box"><i class="med fa-solid fa-phone-volume"></i></div>
+                <span id="nav-content">Điện thoại</span>
+            </div>
+            <div class="row">
+                <div class="icon-box"><i class="med fa-solid fa-location-dot"></i></div>
+                <span id="nav-content">ATM/Chi nhánh</span>
+            </div>
+            <div class="row">
+                <div class="icon-box"><i class="med fa-solid fa-envelope-open-text"></i></div>
+                <span id="nav-content">Yêu cầu hỗ trợ</span>
+            </div>
+        </div> 
+    </div>
+    <div class="absolute hidden-block" *ngIf="isVisible">
+        <div class="padding-5">
+            <div class="flex wrap gap-075">
+                <a class="fancy flex-176 card-content">
+                    <div class="flex flex-col padding-5 gap-5">
+                        <i class="largerMed fa-solid fa-heart-circle-plus"></i>
+                        <div>Chuyển tiền từ thiện</div>
+                    </div>
+                </a>
+                <a class="fancy flex-176 card-content">
+                    <div class="flex flex-col padding-5 gap-5">
+                        <i class="largerMed fa-solid fa-globe"></i>
+                        <div>Chuyển tiền quốc tế</div>
+                    </div>
+                </a>
+                <a class="fancy flex-176 card-content">
+                    <div class="flex flex-col padding-5 gap-5">
+                        <i class="largerMed fa-solid fa-money-bill-transfer"></i>
+                        <div>Chuyển tiền trong nước</div>
+                    </div>
+                </a>
+                <a class="fancy flex-176 card-content">
+                    <div class="flex flex-col padding-5 gap-5">
+                        <i class="largerMed fa-solid fa-user-group"></i>
+                        <div>Chuyển tiền nhóm</div>
+                    </div>
+                </a>
+                <a class="fancy flex-176 card-content">
+                    <div class="flex flex-col padding-5 gap-5">
+                        <i class="largerMed fa-solid fa-money-bill-1"></i>
+                        <div>Chuyển tiền mặt</div>
+                    </div>
+                </a>
+                <a class="fancy flex-176 card-content">
+                    <div class="flex flex-col padding-5 gap-5">
+                        <i class="largerMed fa-solid fa-truck-fast"></i>
+                        <div>Rút/Chuyển tiền mặt tại VNPOST</div>
+                    </div>
+                </a>
+                <a class="fancy flex-176 card-content">
+                    <div class="flex flex-col padding-5 gap-5">
+                        <i class="largerMed fa-solid fa-calendar-days"></i>
+                        <div>Đặt lịch chuyển tiền</div>
+                    </div>
+                </a>
+            </div>
+            <div class="fancy card-content" style="margin-top: 24px;">
+                <div class="flex flex-col gap-4" style="padding: 24px;">
+                    <h3 id="header">Tiện ích</h3>
+                    <a>
+                        <div class="icon-box"><i class="fa-solid fa-gear"></i></div>
+                        <span>Cài đặc mức chuyển tiền</span>
+                    </a>
+                    <a>
+                        <div class="icon-box"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <span>Trạng thái giao dịch</span>
+                    </a>
+                    <a>
+                        <div class="icon-box"><i class="fa-solid fa-book"></i></div>
+                        <span>Danh bạ người nhận</span>
+                    </a>
+                    <a>
+                        <div class="icon-box"><i class="fa-solid fa-file"></i></div>
+                        <span>Mẫu chuyển tiền</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="absolute hidden-block" style="overflow: auto;" *ngIf="isVisible">
+        <div class="padding-5" >    
+            <div class="flex flex-col gap-075">
+                <div class="fancy card-content padding-5">
+                    <h3 id="header">Thiết yếu</h3>
+                    <div class="flex center space-even">
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-lightbulb"></i>
+                            <div>Tiền điện</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-droplet"></i>
+                            <div>Tiền nước</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-building"></i>
+                            <div>Phí dịch vụ chung cư</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="fancy card-content padding-5">
+                    <h3 id="header">Cước viễn thông</h3>
+                    <div class="flex center wrap space-even">
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-phone-volume"></i>
+                            <div>Cước điện thoại cố định</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-mobile-screen-button"></i>
+                            <div>Cước di động trả sau</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-tv"></i>
+                            <div>Cước truyền hình cáp</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-signal"></i>
+                            <div>Cước Internet ADSL</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-tower-cell"></i>
+                            <div>Cước viễn thông VNPT</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="fancy card-content padding-5">
+                    <h3 id="header">Dịch vụ khác</h3>
+                    <div class="flex center wrap space-even">
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-regular fa-hospital"></i>
+                            <div>Viện phí</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-graduation-cap"></i>
+                            <div>Thanh toán học phí</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-plane-departure"></i>
+                            <div>Thanh toán vé máy bay</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-box"></i>
+                            <div>Phí Logistic</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-chart-pie"></i>
+                            <div>Khoảng vay tài chính</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-seedling"></i>
+                            <div>Dịch vụ vệ sinh môi trường</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-cart-shopping"></i>
+                            <div>Phí dịch vụ chợ/siêu thị</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-clipboard-list"></i>
+                            <div>Thanh toán hóa đơn hàng hóa</div>
+                        </a>
+                        <a class="flex-col flex-70 gap-075 padding-4">
+                            <i class="largerMed fa-solid fa-cart-flatbed-suitcase"></i>
+                            <div>Dịch vụ du lịch</div>
+                        </a>
+                    </div>
+                </div>
+                <button class="bottom row classic-btn">Danh bạ hóa đơn</button>
+            </div>   
+        </div>
+    </div>
+    <div class="absolute hidden-block" *ngIf="isVisible">
+        <div class="padding-5">
+            <div class="flex wrap gap-075">
+                <a class="fancy flex-176 card-content">
+                    <div class="flex flex-col padding-5 gap-5">
+                        <i class="largerMed fa-solid fa-mobile-screen"></i>
+                        <div>Nạp tiền điện thoại</div>
+                    </div>
+                </a>
+                <a class="fancy flex-176 card-content">
+                    <div class="flex flex-col padding-5 gap-5">
+                        <i class="largerMed fa-solid fa-wallet"></i>
+                        <div>Nạp tiền ví điện tử</div>
+                    </div>
+                </a>
+                <a class="fancy flex-176 card-content">
+                    <div class="flex flex-col padding-5 gap-5">
+                        <i class="largerMed fa-solid fa-house-flag"></i>
+                        <div>Nạp tiền đại lý</div>
+                    </div>
+                </a>
+                <a class="fancy flex-176 card-content">
+                    <div class="flex flex-col padding-5 gap-5">
+                        <i class="largerMed fa-solid fa-road"></i>
+                        <div>Nạp tiền tài khoản giao thông</div>
+                    </div>
+                </a>
+                <a class="fancy flex-176 card-content">
+                    <div class="flex flex-col padding-5 gap-5">
+                        <i class="largerMed fa-brands fa-viacoin"></i>
+                        <div>Đăng kí nạp tiền tự động</div>
+                    </div>
+                </a>
+            </div>
+            <button class="row classic-btn" style="margin-top: 28px;">Danh bạ</button>
+        </div>
+    </div>
+</div>
+<div class="right-part">
+    <div class="flex top-bar">
+        <div class="flex flex-end flex-1">
+            <button class="flex btn-1">
+                <div><i class="med fa-solid fa-gear"></i></div>
+                <span>Cài đặt</span>
+            </button>
+            <button class="flex btn-1">
+                <img class="r-icon" src="../assets/pictures/vietnam flag.jpg">
+                <span>Việt Nam</span>
+            </button>
+            <button class="flex btn-1">
+                <div><i class="largerMed fa-solid fa-power-off"></i></div>
+                <span>Đăng xuất</span>
+            </button>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

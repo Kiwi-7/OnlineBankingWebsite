@@ -1,1 +1,321 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+html,body{
+    font-size: 14px;
+    height: 100%;
+}
+
+h2{
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"], input[type="password"]{
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+select{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+option{
+    padding: 12px;
+}
+/*Sizing*/
+.page{
+    width: 100%;
+}
+
+.row{
+    width: 100%;
+}
+
+.full-height{
+    height: 100%;
+}
+
+.logo{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+.large{
+    font-size: 24px;
+}
+.largerMed{
+    font-size: 20px
+}
+.med{
+    font-size: 16px;
+}
+.small{
+    font-size: 12px;
+}
+/*Container*/
+.r-icon{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+.b-r-icon{
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+}
+.btn-1{
+    align-items: center;
+    cursor: pointer;
+    border: #ccc;
+    padding: 0px 10px;
+}
+.classic-btn{
+    height: 40px;
+    min-width: 40px;
+    padding: 2px 16px;
+    border-radius: 10px;
+    border-color: rgb(214, 214, 214);
+    border-width: 1.5px;
+    border-style: solid;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.page-content{
+    padding: 0px 60px;
+    padding-top: 2rem;
+}
+.page-content2{
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    z-index: 1;
+    max-width: 664px;
+}
+
+.box{
+    border-width: 1px;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.box-content{
+    box-sizing: content-box;
+    background-color: rgb(244, 241, 241);
+}
+
+.card-content{
+    box-sizing: content-box;
+    background-color: rgb(255 255 255);
+}
+.text-content{
+    background-color: white;
+    border-radius: 10px;
+    border-color: #d6d6d6;
+    border-width: 1.5px;
+}
+.input-box{
+    padding: 10px 0px;
+    position: relative;
+}
+
+a{
+    display: flex;
+    cursor: pointer;
+}
+i{
+    color: rgb(135, 155, 3);
+}
+span{
+    padding-left: 5px;
+}
+/*Displays*/
+.grid{
+    display: grid;
+}
+.grid-3{
+    grid-template-columns: 33% 33% 33%;
+}
+.grid-2{
+    grid-template-columns: 50% 50%;
+}
+.grid-3 > .box-1-3{
+    text-align: center;
+}
+.col-1-1{
+    grid-column: 1 / span 1;
+}
+.col-2-2{
+    grid-column: 2 / span 2;
+}
+.grid-auto-54{
+    grid-template-columns: auto 54%;
+}
+
+.flex{
+    display: flex;
+}
+.flex-col{
+    flex-direction: column;
+}
+.flex-1{
+    flex: 1 1 0%;
+}
+.flex-70{
+    flex: 1 1 70px;
+}
+.flex-176{
+    flex: 1 1 176px;
+}
+.flex-end{
+    justify-content: flex-end;
+}
+.flex-center{
+    justify-content: center;
+}
+.space-out{
+    justify-content: space-between;
+}
+.space-even{
+    justify-content: space-evenly;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.col{
+    display: inline-block;
+}
+
+.center{
+    align-items: center;
+    text-align: center;
+}
+.left-text{
+    text-align: end;
+}
+.center-h{
+    align-self: center;
+}
+/*Position*/
+.absolute{
+    position: absolute;
+}
+.right{
+    right: 0;
+}
+.bottom{
+    bottom: 0;
+}
+/*Spacing*/
+.padding-4{
+    padding: 1rem;
+}
+.padding-5{
+    padding: 1.25rem;
+}
+
+.gap-6{
+    gap: 1.5rem;
+}
+.gap-5{
+    gap: 1.25rem;
+}
+.gap-4{
+    gap: 1rem;
+}
+.gap-075{
+    gap: 0.75rem;
+}
+
+.blank{
+    min-height: 100%;
+    min-width: 100%;
+}
+/*Decoration & Background*/
+hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-top: 15px;
+}
+
+.contain-page-wrapper{
+    background-size: contain;
+    width: 100%;
+}
+.page-wrapper{
+    background-size: cover;
+}
+
+.blur{
+    filter: blur(10px);
+    z-index: -1;
+}
+.tranparent{
+    background: rgba(255, 255, 255, 0.7);
+}
+.b-tranparent{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.fading{
+    background-image: linear-gradient(to right, rgb(255 255 255 / 0%), rgb(255, 255, 255));
+}
+.darken-green{
+    background-image: linear-gradient(to right, rgb(143, 192, 37), green);
+}
+.card{
+    background: radial-gradient(104.28% 319.06% at 97.08% 2.78%, rgba(46, 60, 1, 0.75) 0%, rgba(76, 111, 10, 0.75) 18.53%, rgba(98, 159, 13, .75) 85.34%);
+    position: relative;
+    color: rgb(255 255 255 / 1);
+    border-width: 0;
+}
+.diagonal-stripes{
+    background: repeating-linear-gradient(  45deg, /* Angle of the stripes */ 
+                                            #abf839, /* First color */
+                                            #abf839 10px, /* End of first color */ 
+                                            #f1f1f1 10px, /* Start of second color */ 
+                                            #f1f1f1 20px /* End of second color */);
+}
+
+.fancy{
+    border-radius: 1rem;
+}
+.fancy-left{
+    border-top-left-radius: 1rem; 
+    border-bottom-left-radius: 1rem;
+}
+.fancy-bottom{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+/*Color*/
+.gray{
+    color: gray;
+}
+.green{
+    color: rgb(143, 192, 37);
+}
+.dark-green{
+    color: darkgreen;
+}
+.gold{
+    color: gold;
+}
+.navy-blue{
+    color: navy;
+}
+/*???*/
+input::-ms-reveal { display: none; }

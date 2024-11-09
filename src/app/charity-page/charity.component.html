@@ -1,0 +1,98 @@
+<div class="page-wrapper full-height" style="background-image:url(../../assets/pictures/main-background.jpg);">
+    <div class="full-height tranparent flex flex-col">
+        <div class="page-content2">
+            <div class="row">
+                <h2>Chuyển tiền từ thiện</h2>
+                <div class="gray row">
+                    Trang chủ > chuyển tiền > chuyển tiền từ thiện
+                </div>
+            </div>
+            <div class="flex flex-col gap-075">
+                <form (ngSubmit)="toCharity2()">
+                    <div class="green" style="margin: 16px 0px;">
+                        Bước 1: khởi tạo giao dịch
+                    </div>
+                    <div class="fancy card-content padding-5" style="margin-bottom: 8px;">
+                        <div class="flex flex-col gap-5">
+                            <div class="grid grid-3">
+                                <div class="green col-1-1 center-h">Tài khoản nguồn</div>
+                                <select 
+                                    class="col-2-2"
+                                    formControlName="rootAccount"
+                                    >
+                                    <option>1022384749</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-3">
+                                <div class="col-1-1">Số dư</div>
+                                <div class="col-2-2">
+                                    <span formControlName="rootMoney"></span>
+                                    <span>VND</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-out" style="padding: 16px 0px;">
+                        <div>Thông tin giao dịch</div>
+                        <div>Hạn mức</div>
+                    </div>
+                    <div class="fancy card-content padding-5" style="margin-bottom: 8px;">
+                        <div class="flex flex-col gap-5">
+                            <div class="grid grid-3">
+                                <div class="green col-1-1 center-h">Quỹ/Tổ chức từ thiện</div>
+                                <select 
+                                    class="col-2-2"
+                                    formControlName="charityName"
+                                    >
+                                    <option>Quỹ từ thiện cho người dân miền Trung</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-3">
+                                <div class="col-1-1">Số tiền ủng hộ</div>
+                                <input 
+                                    class="col-2-2" 
+                                    type="text" 
+                                    placeholder="Nhập số tiền ủng hộ"
+                                    formControlName="receivedMoney"
+                                    >
+                            </div>
+                            <div class="grid grid-3">
+                                <div class="col-1-1">Tên người ủng hộ</div>
+                                <input 
+                                    class="col-2-2" 
+                                    type="text" 
+                                    placeholder="Nhập tên người ủng hộ"
+                                    formControlName="receiverName"
+                                    >
+                            </div>
+                            <div class="grid grid-3">
+                                <div class="col-1-1">Địa chỉ người ủng hộ</div>
+                                <input 
+                                    class="col-2-2" 
+                                    type="text" 
+                                    placeholder="Nhập địa chỉ người ủng hộ"
+                                    formControlName="receiverAddress"
+                                    >
+                            </div>
+                            <div class="grid grid-3">
+                                <div class="col-1-1">Hoàn cảnh ủng hộ</div>
+                                <input 
+                                    class="col-2-2" 
+                                    type="text" 
+                                    placeholder="Nhập hoàn cảnh ủng hộ"
+                                    formControlName="receiverCondition"
+                                    >
+                            </div>
+                        </div>
+                    </div>
+                    <button 
+                        class="classic-btn"
+                        type="submit"
+                        >
+                        Hoàn tất
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

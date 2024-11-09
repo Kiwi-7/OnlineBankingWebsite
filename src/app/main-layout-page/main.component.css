@@ -1,0 +1,92 @@
+#logoName{
+    font-size: 26px;
+    font-weight: bold;
+    color:rgb(93, 122, 7);
+    padding-right: 5px;
+}
+#logoTypeName{
+    font-size: 26px;
+    font-weight: 500;
+    color: #c4f036;
+}
+#nav-content{
+    padding-left: 6px;
+    color: black;
+    align-self: center;
+}
+.thick-a{
+    height: 44px;
+}
+
+.icon-box{
+    width: 38px;
+    display: inline-block;
+    text-align: center;
+    align-self: center;
+}
+.r-icon-box{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #81da28;
+    text-align: center;
+    line-height: 32px;
+    display: inline-block;
+}
+
+
+.left-part{
+    --navbar-width:280px;
+    background-color: rgb(245, 249, 249);
+    width: var(--navbar-width);
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 3;
+}
+.upper-block{
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.mid-block{
+    font-size: 17px;
+    height: fit-content;
+    overflow: auto;
+}
+.bottom-block{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid #ccc
+}
+.hidden-block{
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 400px;
+    background-color: wheat;
+}
+
+.right-part{
+    margin-left: 280px; 
+    width: calc(100% - 280px);
+    height: 100%;
+    z-index: 2;
+    /*position: fixed;*/
+}
+
+.top-bar{
+    height: 72px;
+    background-color: aliceblue;
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+
+#header{
+    margin: 0px 0px 10px 10px;
+}

@@ -1,0 +1,114 @@
+<div class="page-wrapper" style="background-image:url(../../assets/pictures/main-background.jpg);">
+    <div class="full-height tranparent flex flex-col">
+        <div class="page-content2">
+            <div class="row">
+                <h2>Chuyển tiền trong nước</h2>
+                <div class="green row" style="padding: 5px 0px;">
+                    Trang chủ > chuyển tiền > chuyển tiền trong nước
+                </div>
+            </div>
+            <div class="med flex flex-col gap-075">
+                <form [formGroup]="transferForm" (ngSubmit)="toCharity2()">
+                    <div class="green" style="margin: 16px 0px;">
+                        Bước 1: khởi tạo giao dịch
+                    </div>
+                    <div class="fancy card-content padding-5" style="margin-bottom: 8px;">
+                        <div class="flex flex-col gap-5">
+                            <div class="grid grid-3">
+                                <div class="green col-1-1 center-h">Tài khoản nguồn</div>
+                                <select 
+                                    class="col-2-2" 
+                                    formControlName="rootAccount"
+                                    >
+                                    <option>1022384749</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-3">
+                                <div class="green col-1-1">Số dư</div>
+                                <div class="col-2-2">
+                                    <span formControlName="rootMoney">(100000)</span>
+                                    <span>VND</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-out" style="padding: 16px 0px;">
+                        <div>Thông tin người nhận</div>
+                        <div>Mẫu chuyển tiền</div>
+                    </div>
+                    <div class="fancy card-content padding-5" style="margin-bottom: 8px;">
+                        <div class="flex flex-col gap-5">
+                            <div class="grid grid-3">
+                                <div class="green col-1-1 center-h" >Ngân hàng nhận</div>
+                                <select 
+                                    class="col-2-2" 
+                                    formControlName="bankName"
+                                    >
+                                    <option>Vietcombank</option>
+                                    <option>Kiwibank</option>
+                                    <option>Techcombank</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-3">
+                                <div class="green col-1-1 center-h">Tài khoản/Thẻ nhận</div>
+                                <input 
+                                    class="col-2-2" 
+                                    type="text" 
+                                    placeholder="Nhập hoặc chọn số tài khoản/thẻ nhận"
+                                    formControlName="receiverAccount"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-out" style="padding: 16px 0px;">
+                        <div>Thông tin giao dịch</div>
+                        <div>Hạn mức</div>
+                    </div>
+                    <div class="fancy card-content padding-5" style="margin-bottom: 8px;">
+                        <div class="flex flex-col gap-5">
+                            <div class="grid grid-3">
+                                <div class="green col-1-1 center-h">Số tiền</div>
+                                <input 
+                                    class="col-2-2" 
+                                    type="text" 
+                                    placeholder="Nhập số tiền"
+                                    formControlName="receivedMoney"
+                                    >
+                            </div>
+                            <div class="grid grid-3">
+                                <div class="green col-1-1 center-h">Nội dung</div>
+                                <input 
+                                    class="col-2-2" 
+                                    type="text" 
+                                    placeholder="(Mai Hữu Văn) chuyển tiền"
+                                    formControlName="context"
+                                    >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fancy card-content padding-5" style="margin-bottom: 8px;">
+                        <div class="flex flex-col gap-5">
+                            <div class="grid grid-3">
+                                <div class="green col-1-1 center-h">Phân loại giao dịch</div>
+                                <select 
+                                    class="col-2-2"
+                                    formControlName=""
+                                    >
+                                    <option>Mua sắm</option>
+                                    <option>Nhà hàng</option>
+                                    <option>Đi lại</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button 
+                        class="classic-btn"
+                        type="submit"
+                        >
+                        Hoàn tất
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
