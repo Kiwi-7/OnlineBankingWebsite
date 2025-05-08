@@ -1,0 +1,9 @@
+.menu-button { 
+    display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-align: center; cursor: pointer; 
+} /* Container for the menu */ 
+.menu-container { position: relative; } /* Hidden by default */ 
+.vertical-menu { display: none; position: absolute; top: 100%; left: 0; background-color: white; border: 1px solid #ddd; width: 200px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+} /* Style for menu items */ 
+.vertical-menu a { display: block; padding: 10px; text-decoration: none; color: #333; } 
+.vertical-menu a:hover { background-color: #f1f1f1; } /* Show the menu on button hover */ 
+.menu-container:hover .vertical-menu { display: block; }

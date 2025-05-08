@@ -48,10 +48,10 @@ option{
     font-family: 'Times New Roman', Times, serif;
 }
 .large{
-    font-size: 24px;
+    font-size: 25px;
 }
 .largerMed{
-    font-size: 20px
+    font-size: 22px
 }
 .med{
     font-size: 16px;
@@ -63,6 +63,13 @@ option{
 .r-icon{
     height: 32px;
     width: 32px;
+    border-radius: 50%;
+}
+.nav-r-icon{
+    height: 48px;
+    width: 48px;
+    align-content: center;
+    background-color: white;
     border-radius: 50%;
 }
 .b-r-icon{
@@ -136,7 +143,7 @@ i{
     color: rgb(135, 155, 3);
 }
 span{
-    padding-left: 5px;
+    padding-left: 6px;
 }
 /*Displays*/
 .grid{
@@ -188,7 +195,6 @@ span{
 .space-even{
     justify-content: space-evenly;
 }
-
 .wrap{
     flex-wrap: wrap;
 }
@@ -208,6 +214,9 @@ span{
     align-self: center;
 }
 /*Position*/
+.relative{
+    position: relative;
+}
 .absolute{
     position: absolute;
 }
@@ -264,7 +273,7 @@ hr{
     z-index: -1;
 }
 .tranparent{
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.8);
 }
 .b-tranparent{
     background: rgba(0, 0, 0, 0.3);
@@ -290,6 +299,13 @@ hr{
                                             #f1f1f1 20px /* End of second color */);
 }
 
+.no-highlight {
+    -webkit-user-select: none;      /* Safari */
+    -moz-user-select: none;         /* Firefox */
+    -ms-user-select: none;          /* Internet Explorer/Edge */
+    user-select: none;              /* Standard */
+}
+/*Borders*/
 .fancy{
     border-radius: 1rem;
 }

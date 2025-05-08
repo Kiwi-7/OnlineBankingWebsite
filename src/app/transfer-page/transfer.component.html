@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="med flex flex-col gap-075">
-                <form [formGroup]="transferForm" (ngSubmit)="toCharity2()">
+                <form [formGroup]="transferForm" (ngSubmit)="checkInput()">
                     <div class="green" style="margin: 16px 0px;">
                         Bước 1: khởi tạo giao dịch
                     </div>
@@ -26,7 +26,7 @@
                             <div class="grid grid-3">
                                 <div class="green col-1-1">Số dư</div>
                                 <div class="col-2-2">
-                                    <span formControlName="rootMoney">(100000)</span>
+                                    <span formControlName="rootMoney"></span>
                                     <span>VND</span>
                                 </div>
                             </div>
@@ -94,6 +94,7 @@
                                     class="col-2-2"
                                     formControlName=""
                                     >
+                                    <option>None</option>
                                     <option>Mua sắm</option>
                                     <option>Nhà hàng</option>
                                     <option>Đi lại</option>

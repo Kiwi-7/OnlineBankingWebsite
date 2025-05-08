@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component} from '@angular/core';
 import { FormsModule} from '@angular/forms';
 import { Router } from '@angular/router';
+import { OTPSServiceService } from '../service/otps-service.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent {
   showPassword: boolean = false;
   isVisible: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private otpTesting: OTPSServiceService) {}
 
   togglePassword() {
     this.showPassword = !this.showPassword;

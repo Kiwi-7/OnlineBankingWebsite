@@ -11,16 +11,31 @@ import { Router } from '@angular/router';
 })
 export class TransferComponent {
   transferForm: FormGroup;
+  dataChecked = 1;
 
   constructor(private tf: FormBuilder, private router: Router) { 
     this.transferForm = this.tf.group({ 
       rootAccount: ['1022384749'],
-      rootMoney: [''],
+      rootMoney: ['1000000'],
       bankName: ['Vietcombank'],
       receiverAccount: [''], 
       receivedMoney: [''],
       context: [''],
     }); 
+  }
+
+  checkInput() : void {
+    if(this.transferForm.get('receiverAccount')?.value == null)
+      this.dataChecked = 0;
+    if(this.transferForm.get('receivedMoney')?.value == null)
+      this.dataChecked = 0;
+    if(this.transferForm.get('rootAccount')?.value < this.transferForm.get('receivedMoney')?.value)
+      this.dataChecked = 0;
+    if(this.dataChecked = 1) {
+      this.saveTransferData();
+      this.toCharity2();
+    }
+      
   }
 
   saveTransferData(): void { 
@@ -30,6 +45,11 @@ export class TransferComponent {
     localStorage.setItem('receiverAccount', this.transferForm.get('receiverAccount')?.value); 
     localStorage.setItem('receivedMoney', this.transferForm.get('receivedMoney')?.value);
     localStorage.setItem('context', this.transferForm.get('context')?.value);
+  }
+
+  toCharity2() {
+    this.transferForm.reset(); 
+    this.router.navigate(['transfer-2']);
   }
 
   /*loadFormData(): void { 
@@ -42,10 +62,4 @@ export class TransferComponent {
       message: message ? message : '' 
     }); 
   }*/
-
-  toCharity2() {
-    this.saveTransferData();
-    this.transferForm.reset(); 
-    this.router.navigate(['transfer-2']);
-  }
 }

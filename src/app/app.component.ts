@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -9,6 +9,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Online Banking Website';
+
+  ngOnInit() {
+    localStorage.setItem('idNameSave', 'null');
+    console.log(localStorage);
+  }
 }

@@ -54,21 +54,21 @@
 }
 .mid-block{
     font-size: 17px;
-    height: fit-content;
-    overflow: auto;
+    scrollbar-width: none;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .bottom-block{
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    border-top: 1px solid #ccc
+    border-top: 1px solid #ccc;
+    margin-bottom: 10px;
 }
 .hidden-block{
     left: 100%;
     top: 0;
     height: 100%;
     width: 400px;
-    background-color: wheat;
+    background-color: rgb(249, 232, 199);
+    display: none;
 }
 
 .right-part{
@@ -81,8 +81,6 @@
 
 .top-bar{
     height: 72px;
-    background-color: aliceblue;
-    position: sticky;
     top: 0;
     right: 0;
 }
